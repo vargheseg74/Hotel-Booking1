@@ -1,0 +1,360 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { Room, Hotel, Review } from './types';
+
+export const BOUTIQUE_HOTELS: Hotel[] = [
+  {
+    id: 'hotel-aurelia',
+    name: 'The Aurelia Reserve',
+    tagline: 'An Indulgent Haven of Modern Quiet Luxury',
+    location: '142 Bellecour Drive, Eze, French Riviera, France',
+    city: 'Eze',
+    rating: 4.9,
+    reviewsCount: 1340,
+    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
+    description: 'Nestled between the pristine limestone cliffs of Eze and the azure sweep of the Mediterranean Sea, The Aurelia Reserve combines mid-century French Riviera luxury with warm, restorative minimalist design. Experience bespoke butler services, custom-drawn baths, Michelin-calibre dining, and sanctuary-grade ocean vistas.',
+    amenities: [
+      'Infinity Edge Heated Pool',
+      'Michelin-starred Dining Room',
+      'Private Sea Access & Beach Cabanas',
+      'Soma Wellness Spa & Thermal Baths',
+      '24/7 Bespoke Butler Service',
+    ],
+    phone: '+33 4 93 00 11 22',
+    email: 'concierge@aureliareserve.com',
+  },
+  {
+    id: 'hotel-peninsula',
+    name: 'Le Club Peninsula',
+    tagline: 'Elite Seaside Living on the Saint-Tropez Shoreline',
+    location: '65 Avenue des Palmiers, Saint-Tropez, France',
+    city: 'Saint-Tropez',
+    rating: 4.8,
+    reviewsCount: 945,
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
+    description: 'A glowing sanctuary celebrating the authentic beach elegance of Saint-Tropez. Facing the golden beach of Pampelonne, Le Club Peninsula features breezy high ceilings, private yacht charters, sun-drenched gardens, and an iconic lively beach club atmosphere.',
+    amenities: [
+      'Pampelonne Beach Club Club Access',
+      'Private Yacht Mooring & Boarding',
+      'Scented Citrus Poolside Gazebos',
+      'Al-fresco Riviera Seafood Grill',
+      'Chauffeur Towncar Service',
+    ],
+    phone: '+33 4 94 99 88 77',
+    email: 'sttropez@leclubpeninsula.com',
+  },
+  {
+    id: 'hotel-bellecour',
+    name: 'Villa Bellecour',
+    tagline: 'Timeless Cannes Grandeur with Modern Poise',
+    location: '18 Croisette Boulevard, Cannes, France',
+    city: 'Cannes',
+    rating: 4.9,
+    reviewsCount: 1112,
+    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80',
+    description: 'Perfectly centered on the iconic Croisette, Villa Bellecour offers legendary high French society architecture reimagined with state-of-the-art technological comfort. Relish our curated French film screening cellar, rooftop cocktail gardens, and direct private cinema salon.',
+    amenities: [
+      'Rooftop Penthouse Cocktail Garden',
+      'Acoustically Perfect Private Cinema',
+      'French Riviera Caviar & Champagne Club',
+      'Curated Modern & Film Masterwork Art',
+      'Direct Sand Beach Access Point',
+    ],
+    phone: '+33 4 92 11 22 33',
+    email: 'welcome@villabellecour.com',
+  }
+];
+
+export const MOCK_ROOMS: Room[] = [
+  // 1. The Aurelia Reserve (Eze)
+  {
+    id: 'room-1',
+    hotelId: 'hotel-aurelia',
+    hotelName: 'The Aurelia Reserve',
+    name: 'Atelier Classic King',
+    type: 'Standard',
+    description: 'Chic, light-filled standard sanctuary highlighting warm limestone walls, custom white-oak woodwork, and views of our private botanical gardens.',
+    longDescription: 'The Atelier Classic King offers refined tranquility in a beautifully optimized layout. Enjoy floor-to-ceiling ironwork doors opening onto an intimate Juliet balcony overlooking our private olive groves and citrus trees. Includes a cloud-grade custom posture mattress, a floating white-oak writing desk, and an Italian travertine ensuite walk-in rainforest shower.',
+    pricePerNight: 280,
+    capacity: 2,
+    sizeSqFt: 380,
+    bedType: '1 King Bed',
+    images: [
+      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      'Free High-Speed Wi-Fi',
+      'Aurelia Botanical Bath Amenities',
+      'Travertine Rainforest Shower',
+      'Nespresso Vertuo Coffee Station',
+      'Smart Climate Control',
+      'Daily Evening Turndown'
+    ],
+    rating: 4.8,
+    reviewsCount: 312,
+    availableCount: 4,
+    featured: false,
+  },
+  {
+    id: 'room-2',
+    hotelId: 'hotel-aurelia',
+    hotelName: 'The Aurelia Reserve',
+    name: 'Rive Gauche Ocean Terrace',
+    type: 'Deluxe',
+    description: 'Elevated luxury boasting a generous custom-tiled private sun terrace, unobstructed sea-horizon views, and a curated lounge workspace.',
+    longDescription: 'Positioned on our high east wing, the Rive Gauche Ocean Terrace matches the elegant maritime spirit of the Riviera. The spacious primary bedroom features an integrated terrazzo seating salon and slides open onto a 120 sq ft secluded terrace furnished with Belgian lounge chairs. The natural granite bathroom features double vanity sinks and a deep soaking bath with Mediterranean sea views.',
+    pricePerNight: 430,
+    capacity: 2,
+    sizeSqFt: 480,
+    bedType: '1 King Bed',
+    images: [
+      'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      'Secluded 120 sq ft Ocean Terrace',
+      'Free High-Speed Wi-Fi',
+      'Freestanding Sea-View Bathtub',
+      'Plush Linen Robes & Turkish Towels',
+      'Artisanal Fully Stocked Cocktail Bar',
+      'Smart TV with Spatial Audio'
+    ],
+    rating: 4.9,
+    reviewsCount: 228,
+    availableCount: 3,
+    featured: true,
+  },
+  {
+    id: 'room-6',
+    hotelId: 'hotel-aurelia',
+    hotelName: 'The Aurelia Reserve',
+    name: 'The Cliffs Overwater Pavilion',
+    type: 'Royal Villa',
+    description: 'A secluded private glass-floored villa suspended over the shoreline limestone reefs, with infinite horizon pool and sunset yoga pavilion.',
+    longDescription: 'Venture to the absolute edge of coastal majesty. The Cliffs Overwater Pavilion is anchored directly into the private limestone rockface, featuring a partial glass-panel floor showing the crystalline Mediterranean below. Features high vaulted ceilings, a central glass fireplace, an outdoor private infinity-edge swimming pool, and direct ladder steps for private swimming in the sheltered warm sea cove.',
+    pricePerNight: 2200,
+    capacity: 3,
+    sizeSqFt: 1100,
+    bedType: '1 Emperor Canopy Bed',
+    images: [
+      'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      'Suspended Glass Underfloor Panel',
+      'Private Horizon Saltwater Infinity Pool',
+      'Private Coral Garden Swim-Out Ladder',
+      'Virtual Concierge Butler Support',
+      'Unlimited In-Suite Spa Therapies',
+      'Complimentary Heliport Transfers'
+    ],
+    rating: 5.0,
+    reviewsCount: 29,
+    availableCount: 1,
+    featured: true,
+  },
+
+  // 2. Le Club Peninsula (Saint-Tropez)
+  {
+    id: 'room-tropez-1',
+    hotelId: 'hotel-peninsula',
+    hotelName: 'Le Club Peninsula',
+    name: 'San Remo Classic Garden View',
+    type: 'Standard',
+    description: 'Light, sun-drenched sanctuary featuring double-tall windows looking over our landscaped palms, with custom terracotta flooring.',
+    longDescription: 'The San Remo Classic Garden View encapsulates traditional southern French coastal relaxation. Adorned with breezy pastel textiles, hand-scraped teak furniture, and double glass doorways, it includes an oversized plush King mattress, a fully appointed artisanal refreshment cabinet, and dual travertine rain showers.',
+    pricePerNight: 320,
+    capacity: 2,
+    sizeSqFt: 410,
+    bedType: '1 King Bed',
+    images: [
+      'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      'St. Tropez Botanical Care Sets',
+      'Bespoke Scented Pillow Selections',
+      'Free High-Speed Wi-Fi',
+      'Fully Curated Organic Drink Pantry',
+      'Poolside Gazebo Reservation Privilege'
+    ],
+    rating: 4.7,
+    reviewsCount: 154,
+    availableCount: 4,
+    featured: false,
+  },
+  {
+    id: 'room-tropez-2',
+    hotelId: 'hotel-peninsula',
+    hotelName: 'Le Club Peninsula',
+    name: 'Tropezienne Plunge Pool Garden Wood',
+    type: 'Deluxe',
+    description: 'Exquisite modern bedroom boasting a private secluded tropical garden court with a heated saltwater dip plunge pool.',
+    longDescription: 'Indulge in unmatched individual sanctuary. The Tropezienne Plunge Suite matches soft white gypsum walls with rich custom olive-wood doors. Step outside onto a secluded teakwood deck complete with double sun beds and your individual heated saltwater dip plunge pool. The designer bathroom comes fully styled with an oversized limestone circular soaking tub.',
+    pricePerNight: 580,
+    capacity: 3,
+    sizeSqFt: 520,
+    bedType: '1 King Bed & 1 Daybed',
+    images: [
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      'Private Heated Saltwater Dip Plunge Pool',
+      'Secluded Tropical Teakwood Garden Deck',
+      'Plush Terry Robes & Sun Slippers',
+      'Signature Saint-Tropez Champagne Welcome',
+      'Personal Beach Club Sun Lounger Reservation'
+    ],
+    rating: 4.9,
+    reviewsCount: 88,
+    availableCount: 2,
+    featured: true,
+  },
+  {
+    id: 'room-tropez-3',
+    hotelId: 'hotel-peninsula',
+    hotelName: 'Le Club Peninsula',
+    name: 'Serene Coastal Penthouse',
+    type: 'Executive Suite',
+    description: 'Palatial coastal flat providing panoramic views of the entire Saint-Tropez marina, separate workspace parlor, and full private dining table.',
+    longDescription: 'Elevate your expectations at our highest level. The Serene Coastal Penthouse commands magnificent panoramic visuals of glistening yachts and the Tropezienne bay. Includes an expansive, sun-infused lounge salon adorned with custom Riviera artwork, a separate mahogany dining table for families, and a magnificent master retreat wrapped in 1000-thread Egyptian linework.',
+    pricePerNight: 950,
+    capacity: 4,
+    sizeSqFt: 860,
+    bedType: '1 Emperor Canopy Bed & 1 Sleeper Sofa',
+    images: [
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      '24/7 Peninsula Captain Butler Service',
+      'Full Dining Salon with Penthouse Balcony',
+      'Premium Custom Wine Cooler Cabin',
+      'Dual Marble Double Vanity Baths',
+      'VIP Beachfront Cabana Access Included',
+      'Complimentary Sunset Yacht Cocktail Cruise'
+    ],
+    rating: 4.9,
+    reviewsCount: 76,
+    availableCount: 1,
+    featured: true,
+  },
+
+  // 3. Villa Bellecour (Cannes)
+  {
+    id: 'room-cannes-1',
+    hotelId: 'hotel-bellecour',
+    hotelName: 'Villa Bellecour',
+    name: 'Boulevard View Double',
+    type: 'Standard',
+    description: 'Sophisticated standard layout looking over the historic Croisette Boulevard, featuring beautiful French mouldings and high ceilings.',
+    longDescription: 'The Boulevard View Double brings timeless Cannes poise right into your window pane. Hand-painted plaster frame lines and brass chandelier fixtures offer an elegant, cinematic backdrop. Furnished with two custom luxury queen beds, a writing bureau, and a sparkling white Carrara marble ensuite bath.',
+    pricePerNight: 380,
+    capacity: 4,
+    sizeSqFt: 460,
+    bedType: '2 Queen Beds',
+    images: [
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      'Carrara Marble Double Rain Shower',
+      'Fully Private Soundproof Acoustic Frames',
+      'Complimentary French Macarons Box on arrival',
+      'In-Room iPad Smart Estate controls',
+      'Premium Dyson Haircare Styling Suite'
+    ],
+    rating: 4.8,
+    reviewsCount: 120,
+    availableCount: 3,
+    featured: false,
+  },
+  {
+    id: 'room-cannes-2',
+    hotelId: 'hotel-bellecour',
+    hotelName: 'Villa Bellecour',
+    name: 'The Cannes Marina Suite',
+    type: 'Executive Suite',
+    description: 'Sophisticated executive sanctuary providing separate reading workspace, private cocktail wet bar, and elegant balcony views of Cannes yachts.',
+    longDescription: 'Drenched in cinematic glamour, The Cannes Marina Suite features a gorgeous, deep-toned salon completed with mid-century French armchairs and a private walnut cocktail wet bar. The bedroom features a majestic royal king pedestal bed looking straight onto a private limestone balcony facing the yacht anchorage.',
+    pricePerNight: 820,
+    capacity: 3,
+    sizeSqFt: 720,
+    bedType: '1 Royal King Bed',
+    images: [
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      'Exclusive Croisette Club Evening Lounge Access',
+      'Private Walnut cocktail bar with fresh ice machine',
+      'French Limestone Private Sitting Balcony',
+      'Full Evening Caviar Cart Delivery option',
+      'Bespoke Pillow & Essential oil selection portal'
+    ],
+    rating: 4.9,
+    reviewsCount: 104,
+    availableCount: 2,
+    featured: true,
+  },
+  {
+    id: 'room-cannes-3',
+    hotelId: 'hotel-bellecour',
+    hotelName: 'Villa Bellecour',
+    name: 'The Grand Palais Residence',
+    type: 'Presidential Suite',
+    description: 'The absolute pinnacle of Cannes high-prestige residence. Wraparound terrace with private hot tub, cinematic room, and priority film festival pass access.',
+    longDescription: 'Welcome to the legendary heart of Riviera glamour. The Grand Palais Residence has hosted icons of cinema and statecraft. Spanning the entire south wing, this majestic collection of living spaces offers an expansive glass foyer, a hand-carved mahogany billiard room, a dedicated private cinematic Dolby screening suite, and an extraordinary wraparound terrace featuring a heated infinity spa whirlpool overlooking the Cannes coastline.',
+    pricePerNight: 1800,
+    capacity: 5,
+    sizeSqFt: 1540,
+    bedType: '2 Grand Emperor Beds',
+    images: [
+      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80',
+    ],
+    amenities: [
+      'Private Wraparound Sun Terrace with Infinity Hot Tub',
+      'Private 8-seat Cinematic Sound Screening Salon',
+      'Full Kitchen & Private Award-Winning Cannes On-Call Chef',
+      'Timeless Steinway & Sons Grand Billiard Table',
+      'VIP Cannes Yacht festival Priority Chauffeur'
+    ],
+    rating: 5.0,
+    reviewsCount: 65,
+    availableCount: 1,
+    featured: true,
+  }
+];
+
+export const GENERAL_REVIEWS: Review[] = [
+  {
+    id: 'rev-1',
+    author: 'Eleanor Vance',
+    rating: 5,
+    date: 'May 14, 2026',
+    comment: 'An absolutely otherworldly escape. The level of detail from the custom botanical fragrances to the midnight room fireplace preparation is completely flawless. The Rive Gauche room was pristine, and watching sunset over the cliffs from the freestanding bath was a memory I will carry forever.',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80'
+  },
+  {
+    id: 'rev-2',
+    author: 'Maximilian Vance-Sterling',
+    rating: 5,
+    date: 'April 28, 2026',
+    comment: 'The Aurelia Presidential Residence exceeded all international ultra-luxury benchmarks. The private chef prepared an exceptional coastal dinner on our terrace, and the private sea-cave swim-out was a pristine adventure. Exemplary stewardship by our butler Hugo.',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80'
+  },
+  {
+    id: 'rev-3',
+    author: 'Clara Ross-Geller',
+    rating: 4,
+    date: 'June 01, 2026',
+    comment: 'Elegant modern space that avoids the pretense of older grand hotels. The Atelier Room was extremely cozy with beautifully detailed oak joinery and high-speed Wi-Fi. The thermal baths at SOMA spa were extremely restorative.',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80'
+  }
+];

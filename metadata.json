@@ -1,0 +1,6 @@
+{
+  "name": "Hotel Booking",
+  "description": "An elegant, beautifully designed hotel booking application. Browse luxury spaces, filter and sort by preferences, customize guests and check-in/out dates, and secure reservations with interactive bookings and local persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
